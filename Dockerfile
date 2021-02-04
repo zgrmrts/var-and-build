@@ -16,6 +16,7 @@ RUN apt-get -y install u-boot-tools mtd-utils android-tools-fsutils device-tree-
 RUN apt-get -y install openjdk-8-jdk
 RUN apt-get -y install cpio
 RUN apt-get -y install vim
+RUN apt-get -y install rsync
 COPY gitconfig /home/$username/.gitconfig
 RUN chown $userid:$groupid /home/$username/.gitconfig
 ENV HOME=/home/$username
