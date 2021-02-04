@@ -14,9 +14,11 @@ RUN apt-get -y install ccache libgl1-mesa-dev libxml2-utils xsltproc unzip bc
 RUN apt-get -y install uuid uuid-dev zlib1g-dev liblz-dev liblzo2-2 liblzo2-dev lzop git curl
 RUN apt-get -y install u-boot-tools mtd-utils android-tools-fsutils device-tree-compiler gdisk m4
 RUN apt-get -y install openjdk-8-jdk
+RUN apt-get -y install cpio
+RUN apt-get -y install vim
 COPY gitconfig /home/$username/.gitconfig
 RUN chown $userid:$groupid /home/$username/.gitconfig
 ENV HOME=/home/$username
 ENV USER=$username
 ENTRYPOINT chroot --userspec=$(cat /root/username):$(cat /root/username) / /bin/bash -i
-
+COPY build-android.sh /build-android.sh
