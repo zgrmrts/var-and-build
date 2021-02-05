@@ -17,6 +17,7 @@ RUN apt-get -y install openjdk-8-jdk
 RUN apt-get -y install cpio
 RUN apt-get -y install vim
 RUN apt-get -y install rsync
+RUN apt-get -y install python3
 COPY gitconfig /home/$username/.gitconfig
 RUN chown $userid:$groupid /home/$username/.gitconfig
 ENV HOME=/home/$username
