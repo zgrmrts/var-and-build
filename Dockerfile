@@ -23,4 +23,5 @@ RUN chown $userid:$groupid /home/$username/.gitconfig
 ENV HOME=/home/$username
 ENV USER=$username
 ENTRYPOINT chroot --userspec=$(cat /root/username):$(cat /root/username) / /bin/bash -i
-COPY build-android.sh /build-android.sh
+COPY build_android_9.sh /build_android_9.sh
+COPY build_android_10.sh /build_android_10.sh
