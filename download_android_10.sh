@@ -11,6 +11,6 @@ git clone https://github.com/varigit/uboot-imx.git -b imx_v2020.04_5.4.24_2.1.0_
 git clone https://github.com/varigit/linux-imx kernel_imx -b android-10.0.0_2.5.0-var01 &&
 cd "${ROOT_ANDROID_DIR}/android_build/device" &&
 git clone https://github.com/varigit/MX6x-android.git -b android-10.0.0_2.5.0-var01 variscite &&
-variscite/scripts/install.sh &&
+variscite/scripts/install.sh qx &&
 echo done
 
