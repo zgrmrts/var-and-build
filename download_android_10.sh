@@ -1,3 +1,4 @@
+#! /bin/bash
 set -x
 ROOT_ANDROID_DIR="${PWD}/../var_imx-android-10.0.0_2.5.0"
 mkdir -p "${ROOT_ANDROID_DIR}" &&
@@ -12,5 +13,5 @@ git clone https://github.com/varigit/linux-imx kernel_imx -b android-10.0.0_2.5.
 cd "${ROOT_ANDROID_DIR}/android_build/device" &&
 git clone https://github.com/varigit/MX6x-android.git -b android-10.0.0_2.5.0-var01 variscite &&
 variscite/scripts/install.sh qx &&
-echo done
+echo "done"
 
